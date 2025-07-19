@@ -6,7 +6,6 @@ import Navbar from './components/Navbar';
 export default function Home() {
   return (
     <main className="bg-gradient-to-b from-white to-gray-100 min-h-screen font-sans">
-       <Navbar />
       {/* Hero Section */}
       <section className="text-center py-20 px-8 md:px-16 lg:px-32">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-blue-800 mb-6 animate-fade-in">
@@ -31,7 +30,7 @@ export default function Home() {
             </p>
           </div>
           <div className="rounded-2xl shadow-lg overflow-hidden">
-            <img src="/images/about.jpg" alt="About N Gen Decorations" className="w-full h-auto" />
+            <img src="/logo.png" alt="About N Gen Decorations" className="w-full h-auto" />
           </div>
         </div>
       </section>

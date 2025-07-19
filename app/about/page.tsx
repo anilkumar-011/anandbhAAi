@@ -1,11 +1,9 @@
 "use client"
 import React from 'react';
-import Navbar from '../components/Navbar';
 
 export default function About() {
   return (
     <>
-      <Navbar />
 
       <main className="bg-gray-50 text-gray-800">
         {/* Hero Section */}
