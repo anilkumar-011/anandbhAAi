@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import Image from "next/image";
 
 const gallerySections = [
   {
@@ -36,6 +38,7 @@ const gallerySections = [
 const GalleryPage = () => {
   return (
     <div className="bg-white text-gray-800">
+      {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-700 to-blue-500 text-white py-16 px-6 text-center">
         <h1 className="text-4xl font-bold mb-4">Our Project Gallery</h1>
         <p className="text-lg max-w-3xl mx-auto">
@@ -43,6 +46,7 @@ const GalleryPage = () => {
         </p>
       </section>
 
+      {/* Gallery Sections */}
       {gallerySections.map((section, idx) => (
         <section
           key={idx}
@@ -56,12 +60,13 @@ const GalleryPage = () => {
             {section.images.map((src, i) => (
               <div
                 key={i}
-                className="overflow-hidden rounded-xl shadow hover:shadow-lg transition duration-300"
+                className="relative w-full h-64 overflow-hidden rounded-xl shadow hover:shadow-lg transition duration-300"
               >
-                <img
+                <Image
                   src={src}
                   alt={`${section.title} ${i + 1}`}
-                  className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
             ))}

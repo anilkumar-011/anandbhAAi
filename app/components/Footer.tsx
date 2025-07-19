@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaGlobe } from "react-icons/fa";
 
 const Footer = () => {
@@ -9,7 +10,14 @@ const Footer = () => {
         {/* Logo + Company Info */}
         <div>
           <div className="flex items-center gap-4 mb-4">
-            <img src="/logo.png" alt="N Gen Logo" className=" object-contain" />
+            <Image
+              src="/logo.png"
+              alt="N Gen Logo"
+              width={48}
+              height={48}
+              className="object-contain"
+            />
+            <h3 className="text-2xl font-bold text-white">N Gen Decorations</h3>
           </div>
           <p className="flex items-start gap-2 text-sm">
             <FaMapMarkerAlt className="mt-1" />

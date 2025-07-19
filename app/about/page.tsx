@@ -29,7 +29,7 @@ export default function About() {
               Based in Hyderabad, our expert team integrates eco-friendly technologies, certified materials, and thoughtful design into every project.
             </p>
           </div>
-          <img
+          <Image
             src="/images/team.jpg"
             alt="Team at work"
             className="rounded-2xl shadow-lg w-full h-auto object-cover"
@@ -63,7 +63,7 @@ export default function About() {
 
         {/* Mission Section */}
         <section className="py-20 px-6 md:px-20 bg-white grid md:grid-cols-2 gap-12 items-center">
-          <img
+          <Image
             src="/images/sustainability.jpg"
             alt="Sustainability in practice"
             className="rounded-2xl shadow-lg w-full h-auto object-cover"

@@ -1,11 +1,11 @@
-"use client"
+"use client";
 import React from 'react';
-import Navbar from './components/Navbar';
-
+import Image from 'next/image';
 
 export default function Home() {
   return (
     <main className="bg-gradient-to-b from-white to-gray-100 min-h-screen font-sans">
+     ]
       {/* Hero Section */}
       <section className="text-center py-20 px-8 md:px-16 lg:px-32">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-blue-800 mb-6 animate-fade-in">
@@ -30,7 +30,13 @@ export default function Home() {
             </p>
           </div>
           <div className="rounded-2xl shadow-lg overflow-hidden">
-            <img src="/logo.png" alt="About N Gen Decorations" className="w-full h-auto" />
+            <Image
+              src="/logo.png"
+              alt="About N Gen Decorations"
+              width={500}
+              height={300}
+              className="w-full h-auto object-contain"
+            />
           </div>
         </div>
       </section>
@@ -69,11 +75,7 @@ export default function Home() {
         </a>
       </section>
 
-      {/* Footer */}
-      <footer className="text-center py-10 px-6 text-sm text-gray-500">
-        <p className="mb-2">&copy; 2025 N Gen Decorations. All rights reserved.</p>
-        <p>Email: <a className="text-blue-600" href="mailto:ngendecoration@gmail.com">ngendecoration@gmail.com</a></p>
-      </footer>
+  
     </main>
   );
 }
