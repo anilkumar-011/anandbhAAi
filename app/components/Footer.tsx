@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaGlobe } from "react-icons/fa";
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaGlobe, FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -10,11 +10,11 @@ const Footer = () => {
         {/* Logo + Company Info */}
         <div>
           <div className="flex items-center justify-center border-2 border-white rounded-3xl bg-white m-auto p-2 mb-4">
-           <img 
-            src="./211.png" 
-            alt="N Gen Decorations Logo" 
-            className="h-10 w-auto"
-          />
+            <img
+              src="./211.png"
+              alt="N Gen Decorations Logo"
+              className="h-10 w-auto"
+            />
             {/* <h3 className="text-2xl font-bold text-white">N Gen Decorations</h3> */}
           </div>
           <p className="flex items-start gap-2 text-sm">
@@ -51,10 +51,19 @@ const Footer = () => {
               ngendecorations.com
             </a>
           </p>
-          <div className="mt-4 space-x-4">
-            <a href="#" className="inline-block text-gray-400 hover:text-white text-sm">Facebook</a>
-            <a href="#" className="inline-block text-gray-400 hover:text-white text-sm">Instagram</a>
-            <a href="#" className="inline-block text-gray-400 hover:text-white text-sm">YouTube</a>
+          <div className="mt-4 space-y-2">
+            <p className="flex items-center gap-2 text-sm">
+              <FaFacebook />
+              <a href="#" className="text-gray-400 hover:text-white">Facebook</a>
+            </p>
+            <p className="flex items-center gap-2 text-sm">
+              <FaInstagram />
+              <a href="https://www.instagram.com/n_gen_decorations?igsh=cmljbHg5bTJ2eGVl" className="text-gray-400 hover:text-white">Instagram</a>
+            </p>
+            <p className="flex items-center gap-2 text-sm">
+              <FaYoutube />
+              <a href="#" className="text-gray-400 hover:text-white">YouTube</a>
+            </p>
           </div>
         </div>
       </div>
