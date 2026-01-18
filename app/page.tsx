@@ -32,7 +32,7 @@ export default function Home() {
           </div>
           <div className="relative w-full h-72 md:h-96 rounded-2xl overflow-hidden shadow-lg">
             <Image
-              src="/13.jpg"
+              src="/123.png"
               alt="N Gen Decorations Logo"
               fill
               className="object-contain bg-white"
@@ -112,7 +112,7 @@ export default function Home() {
         <p className="text-gray-600 text-lg sm:text-xl max-w-3xl mx-auto mb-8">
           Discover the perfect protection and finish for your space. Let’s build something beautiful and durable together.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center text-center">
           <a
             href="https://wa.me/917569334897"
             target="_blank"

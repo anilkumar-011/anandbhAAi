@@ -19,7 +19,7 @@ export default function Navbar() {
         {/* Logo / Brand */}
         <div className="flex items-center">
           <img 
-            src="./12.jpg" 
+            src="./211.png" 
             alt="N Gen Decorations Logo" 
             className="h-10 w-auto"
           />

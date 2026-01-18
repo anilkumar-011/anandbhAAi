@@ -30,7 +30,7 @@ export default function About() {
         </div>
         <div className="relative w-full h-72 md:h-96 rounded-2xl overflow-hidden shadow-lg">
           <Image
-            src="/images/team.jpg"
+            src="./999.png"
             alt="Team at work"
             fill
             className="object-cover"
@@ -71,7 +71,7 @@ export default function About() {
       <section className="py-20 px-6 md:px-20 bg-white grid md:grid-cols-2 gap-12 items-center">
         <div className="relative w-full h-72 md:h-96 rounded-2xl overflow-hidden shadow-lg">
           <Image
-            src="/images/sustainability.jpg"
+            src="./888.png"
             alt="Sustainability in practice"
             fill
             className="object-cover"
