@@ -30,11 +30,19 @@ const ContactPage = () => {
                 </div>
             </section>
 
-            {/* Map Placeholder (optional) */}
+            {/* Google Map */}
             <section className="px-6 pb-16 max-w-4xl mx-auto">
                 <h2 className="text-2xl font-bold mb-4">Visit Us</h2>
-                <div className="w-full h-64 bg-gray-200 flex items-center justify-center rounded-lg">
-                    <p className="text-gray-500">[Google Map Embed Here]</p>
+                <div className="w-full rounded-lg overflow-hidden shadow-lg">
+                    <iframe
+                        width="100%"
+                        height="400"
+                        style={{ border: 0 }}
+                        loading="lazy"
+                        allowFullScreen
+                        referrerPolicy="no-referrer-when-downgrade"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3808.713560056594!2d78.5810966!3d17.3293642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcba1674ef7f363%3A0xb9924457fc8fdeb7!2sN%20Gen%20Decorations!5e0!3m2!1sen!2sin!4v1768747601909!5m2!1sen!2sin"
+                    ></iframe>
                 </div>
             </section>
         </div>
