@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
 import Image from 'next/image';
+import { FaWhatsapp, FaEnvelope } from 'react-icons/fa';
 
 export default function Home() {
   return (
@@ -31,7 +32,7 @@ export default function Home() {
           </div>
           <div className="relative w-full h-72 md:h-96 rounded-2xl overflow-hidden shadow-lg">
             <Image
-              src="/logo.png"
+              src="/13.jpg"
               alt="N Gen Decorations Logo"
               fill
               className="object-contain bg-white"
@@ -41,24 +42,63 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="bg-gray-50 py-20 px-6 md:px-20">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center text-blue-800 mb-14">
+      <section className="bg-gradient-to-b from-gray-50 to-white py-20 px-6 md:px-20">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center text-blue-800 mb-4">
           Our Core Services
         </h2>
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto mb-14 rounded-full"></div>
+        <div className="space-y-12 max-w-7xl mx-auto">
           {[
-            { title: "Waterproofing", desc: "Protect terraces, basements, and bathrooms with cutting-edge waterproofing systems." },
-            { title: "Painting", desc: "Eco-friendly mineral and silicate paints that breathe and last." },
-            { title: "Aluminum Partition", desc: "Smart, sleek dividers to optimize space with modern design." },
-            { title: "Wood Polish", desc: "Premium wood care for doors, furniture, and interiors." },
-            { title: "Civil Works", desc: "From structural reinforcement to aesthetic finishing touches." },
+            {
+              title: "Waterproofing",
+              desc: "We provide high-performance, multi-layer waterproofing solutions designed to protect critical areas such as terraces, basements, and bathrooms from hydrostatic pressure and seepage. Utilizing advanced polyurethane coatings and crystalline admixtures, our systems create an impermeable barrier that prevents structural degradation and mold growth, ensuring the long-term integrity of your property.",
+              image: "./waterproofing.jpg"
+            },
+            {
+              title: "Painting",
+              desc: "Our premium painting services utilize eco-friendly mineral and silicate-based coatings that prioritize both aesthetics and environmental health. Unlike standard acrylics, these paints facilitate high vapor permeability, allowing walls to 'breathe' and prevent moisture buildup. The result is a UV-resistant, non-toxic finish that offers exceptional longevity and vibrant color retention.",
+              image: "./painting.jpg"
+            },
+            {
+              title: "Aluminum Partition",
+              desc: "We design and install high-grade aluminum partitioning systems that offer a smart, sleek solution for space optimization. Engineered with precision-extruded frames and modular panels, these dividers provide superior acoustic insulation and structural stability while maintaining a modern aesthetic. Our partitions allow for seamless integration into layouts to enhance privacy without sacrificing natural light.",
+              image: "./partition.jpg"
+            },
+            {
+              title: "Wood Polish",
+              desc: "Our premium wood care and restoration services employ a meticulous multi-step process to enhance and preserve the natural beauty of doors, furniture, and interior woodwork. Using high-quality polyurethane (PU) or melamine finishes, we provide a protective layer resistant to scratches and moisture, penetrating deep into the grain to prevent warping and ensuring a sophisticated, long-lasting luster.",
+              image: "./wood-polish.jpeg"
+            },
+            {
+              title: "Civil Works",
+              desc: "We execute comprehensive civil engineering and construction services ranging from foundational structural reinforcement to high-end aesthetic finishing. Our team manages every phase—including masonry, plastering, and structural repairs—adhering to strict safety codes. By combining quality raw materials with skilled craftsmanship, we ensure that every build is structurally sound, functional, and visually flawless.",
+              image: "./civil-works.jpeg"
+            },
+            {
+              title: "Moisture detection test",
+              desc: "We provide advanced wall scanning services using the D-TECT 200 C to accurately detect both live and non-live electrical cables, metal objects, plastic pipes, wooden studs, and hidden cavities within walls, floors, and ceilings. This non-destructive scanning ensures safe drilling, cutting, and construction activities by preventing accidental damage to concealed utilities and structural elements, thereby enhancing work efficiency, safety, and precision.",
+              image: "./moisturetest.jpg"
+            }
           ].map((service, idx) => (
             <div
               key={idx}
-              className="p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transition-transform duration-300 transform hover:-translate-y-1"
+              className={`grid md:grid-cols-2 gap-10 items-center p-8 rounded-3xl border-2 border-blue-100 bg-white shadow-md hover:shadow-2xl transition-all duration-300 ${idx % 2 === 1 ? 'md:grid-flow-col-dense' : ''}`}
             >
-              <h3 className="text-xl font-semibold text-blue-700 mb-3">{service.title}</h3>
-              <p className="text-gray-600 text-base">{service.desc}</p>
+              <div className={idx % 2 === 1 ? 'md:order-2' : ''}>
+                <div className="relative w-full h-80 rounded-3xl overflow-hidden shadow-lg border-4 border-blue-200 hover:border-blue-400 transition-colors duration-300">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              </div>
+              <div className={`flex flex-col justify-center ${idx % 2 === 1 ? 'md:order-1' : ''}`}>
+                <div className="w-12 h-1 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full mb-4"></div>
+                <h3 className="text-3xl font-bold text-blue-800 mb-4">{service.title}</h3>
+                <p className="text-gray-600 text-lg leading-relaxed">{service.desc}</p>
+              </div>
             </div>
           ))}
         </div>
@@ -72,12 +112,24 @@ export default function Home() {
         <p className="text-gray-600 text-lg sm:text-xl max-w-3xl mx-auto mb-8">
           Discover the perfect protection and finish for your space. Let’s build something beautiful and durable together.
         </p>
-        <a
-          href="mailto:ngendecoration@gmail.com"
-          className="inline-block bg-blue-700 text-white hover:bg-blue-800 font-medium px-8 py-4 rounded-full text-lg sm:text-xl transition-all duration-300"
-        >
-          Contact Us
-        </a>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="https://wa.me/917569334897"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-green-600 text-white hover:bg-green-700 font-medium px-8 py-4 rounded-full text-lg sm:text-xl transition-all duration-300"
+          >
+            <FaWhatsapp className="text-xl" />
+            WhatsApp Us
+          </a>
+          <a
+            href="mailto:ngendecoration@gmail.com"
+            className="inline-flex items-center gap-2 bg-blue-700 text-white hover:bg-blue-800 font-medium px-8 py-4 rounded-full text-lg sm:text-xl transition-all duration-300"
+          >
+            <FaEnvelope className="text-xl" />
+            Mail Us
+          </a>
+        </div>
       </section>
     </main>
   );

@@ -17,8 +17,12 @@ export default function Navbar() {
       {/* Navbar container */}
       <div className="max-w-7xl mx-auto px-6 md:px-10 py-4 flex justify-between items-center">
         {/* Logo / Brand */}
-        <div className="text-2xl font-bold text-blue-800">
-          N Gen Decorations
+        <div className="flex items-center">
+          <img 
+            src="./12.jpg" 
+            alt="N Gen Decorations Logo" 
+            className="h-10 w-auto"
+          />
         </div>
 
         {/* Desktop Menu */}

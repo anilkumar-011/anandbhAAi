@@ -65,7 +65,7 @@ const ServicesPage = () => {
           <p>Email: <a href="mailto:accounts@ngendecorations.com" className="text-blue-700 underline">accounts@ngendecorations.com</a></p>
           <p>Phone: <span className="font-semibold">96400 15243 / 75693 34897</span></p>
           <p>Location: Bhulaxmi Nagar Rd, Vanasthalipuram, Hyderabad, Telangana</p>
-          <p>Website: <a href="https://ngendecorations.com" className="text-blue-700 underline">ngendecorations.com</a></p>
+          <p>Website: <a href="http://ngendecorations.com" className="text-blue-700 underline">ngendecorations.com</a></p>
         </div>
       </section>
     </div>

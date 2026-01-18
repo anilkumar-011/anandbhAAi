@@ -9,15 +9,13 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-10 border-b border-blue-700 pb-10">
         {/* Logo + Company Info */}
         <div>
-          <div className="flex items-center gap-4 mb-4">
-            <Image
-              src="/logo.png"
-              alt="N Gen Logo"
-              width={48}
-              height={48}
-              className="object-contain"
-            />
-            <h3 className="text-2xl font-bold text-white">N Gen Decorations</h3>
+          <div className="flex items-center justify-center border-2 border-white rounded-3xl bg-white m-auto p-2 mb-4">
+           <img 
+            src="./211.png" 
+            alt="N Gen Decorations Logo" 
+            className="h-10 w-auto"
+          />
+            {/* <h3 className="text-2xl font-bold text-white">N Gen Decorations</h3> */}
           </div>
           <p className="flex items-start gap-2 text-sm">
             <FaMapMarkerAlt className="mt-1" />
